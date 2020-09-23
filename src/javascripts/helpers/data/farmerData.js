@@ -57,7 +57,7 @@ const setCurrentFarmer = (farmerObj) => {
 };
 
 const getSingleFarmer = (farmerUid) => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/farmera.json?orderBy="uid"&equalTo="${farmerUid}"`).then((response) => {
+  axios.get(`${baseUrl}/farmers.json?orderBy="uid"&equalTo="${farmerUid}"`).then((response) => {
     const farmer = Object.values(response.data);
     const thisFarmer = farmer[0];
     resolve(thisFarmer);
